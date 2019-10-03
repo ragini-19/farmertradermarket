@@ -17,6 +17,7 @@ public class LoginController {
 	@RequestMapping(method=RequestMethod.POST, value="/login")
 	public String successpage(ModelMap map, @RequestParam String username, @RequestParam String password )
 	{
+		System.out.println("I am in Home/ Controller");
 		map.put("username", username);
 		map.put("password", password);
 		if(username.equals("admin") && password.equals("admin"))
