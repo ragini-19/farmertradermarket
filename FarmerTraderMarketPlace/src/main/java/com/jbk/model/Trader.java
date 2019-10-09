@@ -4,19 +4,23 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tradertable")
+//@Table(name="tradertable")
 @SuppressWarnings("serial")
 public class Trader {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	public int tid;
+	
+	private String status;
+	
 	
 	public String firstname;
 	
@@ -29,6 +33,24 @@ public class Trader {
 	public String email;
 	
 	public String gender;
+	
+	private String usertype;
+	
+	public String getStatus() {
+		return status;
+	}
+
+	public String getUsertype() {
+		return usertype;
+	}
+
+	public void setUsertype(String usertype) {
+		this.usertype = usertype;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	
 	public String getGender() {
 		return gender;

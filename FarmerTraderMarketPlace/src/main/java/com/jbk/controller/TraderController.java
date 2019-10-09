@@ -49,9 +49,9 @@ public class TraderController {
 		{
 			
 			try {
-				mailservice.send(emailofuser, "pallavichaudhari1892@gmail.com", "pls check your mail,you are succesfully registered ", "you are succesfully registerd");
+				mailservice.send(emailofuser, "raginigawande19@gmail.com", "pls check your mail,you are succesfully registered ", "you are succesfully registerd");
 				
-				mailservice.send("tusharbob7@gmail.com", "pallavichaudhari1892@gmail.com", "pls check mail for new trader registration ", emailofuser);
+				mailservice.send("tusharbob7@gmail.com", "raginigawande19@gmail.com", "pls check mail for new trader registration ", emailofuser);
 				
 				System.out.println("ok");
 				
