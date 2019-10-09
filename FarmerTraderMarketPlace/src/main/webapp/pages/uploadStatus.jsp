@@ -4,14 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>welcome</title>
+<title>Insert title here</title>
 </head>
 <body>
-<div align="center">
-<br>
-<br>
-Welcome.... <br>
-Name:${username}
-</div>
+complete
 </body>
 </html>

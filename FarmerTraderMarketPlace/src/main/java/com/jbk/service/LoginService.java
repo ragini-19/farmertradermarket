@@ -9,19 +9,19 @@ import com.jbk.repository.LoginRepository;
 @Service
 public class LoginService {
 
-		
-
-		  @Autowired 
+			  @Autowired 
 		  private LoginRepository logrepo;
 		 
-	public Login findbyusername(String username){
+	 public Login findbyusername(String username)
+	 {
 		return logrepo.findByusername(username);
-	}
+	 }
 
-	   public boolean checkuservalidation(String username,String password){
+	   public boolean checkuservalidation(String username,String password)
+	   {
 		
-		return logrepo.existsByUsernameAndPassword(username, password);
+	       return logrepo.existsByUsernameAndPassword(username, password);
 		
-	}
+       }
 
-	}
+ }

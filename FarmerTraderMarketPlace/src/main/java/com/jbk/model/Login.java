@@ -15,11 +15,21 @@ public class Login {
 
 		@Id
 		@GeneratedValue
-		private int uid;
+		private int lid;
 		
+
 		private String username;
 		private String password;
 	    private String usertype;
+		
+		public int getLid() {
+			return lid;
+		}
+
+		public void setLid(int lid) {
+			this.lid = lid;
+		}
+
 	    
 	    public Login()
 	    {
@@ -34,13 +44,7 @@ public class Login {
 			this.username = username;
 		}
 
-	      public int getUid() {
-			return uid;
-		    }
-
-		public void setUid(int uid) {
-			this.uid = uid;
-		}
+	     
 
 		public String getPassword() {
 			return password;

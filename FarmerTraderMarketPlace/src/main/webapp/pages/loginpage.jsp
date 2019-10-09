@@ -27,6 +27,9 @@
   <td> <td><input type ="submit" value="login"/></td>
  </tr>
  
+  <tr>
+  <td> <td><input type ="submit" value="signup"/></td>
+ </tr>
 
 </table>
 </form>
@@ -35,4 +38,4 @@
 
 
 </body>
-</html>
+</html> 

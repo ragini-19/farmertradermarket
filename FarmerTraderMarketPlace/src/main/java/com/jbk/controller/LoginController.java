@@ -2,6 +2,7 @@ package com.jbk.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.jbk.model.Login;
+
 import com.jbk.service.LoginService;
 
 @Controller
@@ -18,6 +20,24 @@ public class LoginController {
 
 	@Autowired
 	private	LoginService loginservice;
+	
+	 @RequestMapping(value = "/user", method = RequestMethod.GET)
+	   public ModelAndView user() {
+	      Login login = new Login();	  
+		  ModelAndView modelAndView = new ModelAndView("login", "command", login);
+		  return modelAndView;
+	   }
+
+	   @RequestMapping(value = "/addUser", method = RequestMethod.POST)
+	   public ModelAndView addUser(@ModelAttribute("SpringWeb")Login login, 
+	      Model model) {
+	  //we pass all information on user jsp page to another page using addobject
+	     // model.addObject("user",login);
+	      model.addAttribute("login", login);
+	      return new ModelAndView("users");
+	   }
+	   
+	
 	
 	 @RequestMapping(value="/userlogin",method=RequestMethod.GET)
 	 	public ModelAndView gotOUserLogin()
@@ -60,32 +80,4 @@ public class LoginController {
 		return new ModelAndView("loginpage");
 	
 	}
-	
-	
-	
-	
-	/*@RequestMapping("/login")
-	public String login(ModelMap map)
-	{
-		return "login";
-	}
-	@RequestMapping(method=RequestMethod.POST, value="/login")
-	public String successpage(ModelMap map, @RequestParam String username, @RequestParam String password )
-	{
-		System.out.println("I am in Home/ Controller");
-		map.put("username", username);
-		map.put("password", password);
-		if(username.equals("admin") && password.equals("admin"))
-		{
-		return "success";
-		}
-		else
-		{
-			map.put("message","Please enter valid username or password");
-return "login";
-		}
-		
-	}
-*/
-
 }

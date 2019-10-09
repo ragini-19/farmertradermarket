@@ -5,9 +5,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class FarmerTraderMarketPlaceApplication {
-
+	
+	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(FarmerTraderMarketPlaceApplication.class, args);
+		
+		
+		
+		
+		
+		
+		
+	
 	}
-
 }
